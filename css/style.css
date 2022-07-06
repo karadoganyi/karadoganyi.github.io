@@ -62,7 +62,6 @@ img {
 .section-blue {
   background-color: var(--dkblue);
 }
-
 .gradient {
   background: linear-gradient(
     90deg,
@@ -100,7 +99,7 @@ img {
 }
 
 #intro h2 {
-  font-size: 3.5rem;
+  font-size: 3.1rem;
 }
 
 /* contact section */
@@ -222,6 +221,51 @@ nav [class*="fa-"]:hover {
   border-top: 1px solid var(--aqua);
   border-radius: 25px;
 }
+
+/* courses section */
+
+#courses {
+  padding: 4rem;
+}
+#courses h2 {
+  font-size: 2rem;
+  margin-bottom: calc(2.5rem * 1.5);
+  color: var(--white);
+}
+#courses h3 {
+  color: var(--aqua);
+}
+#courses h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+.dkbluebox {
+  padding: 1rem;
+  border-radius: 15px;
+  color: white;
+  background-color: var(--dkblue);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#courses ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+#courses img {
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+}
+
 /* footer section */
 
 footer {
@@ -271,6 +315,41 @@ footer ul {
     grid-row: 1/2;
   }
   #projects .reverse ul {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #courses {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #courses img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+  #courses ul {
+    justify-content: flex-end;
+  }
+  #courses .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #courses .reverse img {
+    grid-column: 5/11;
+    grid-row: 1/2;
+  }
+  #courses .reverse ul {
     justify-content: flex-start;
   }
 }
